@@ -1,6 +1,7 @@
 package concord;
 
 import java.util.ArrayList;
+import java.util.UUID;
 
 public class User
 {
@@ -8,7 +9,7 @@ public class User
 	public String realName;
 
 	public String password;
-	public int ID;
+	public UUID ID;
 	ArrayList<User> blocked_users = new ArrayList<User>(5);
 	public Profile profile;
 	ArrayList<Integer> programID = new ArrayList<Integer>(5);
@@ -19,8 +20,6 @@ public class User
 	{
 		return username;
 	}
-
-
 
 	public void setUsername(String username)
 	{
@@ -52,7 +51,28 @@ public class User
 		this.password = password;
 	}
 
+	public void setID()
+	{
+		this.ID = UUID.randomUUID();
+	}
 	
+	
+	public UUID getID()
+	{
+		return ID;
+	}
+
+
+	public boolean isOnline()
+	{
+		return isOnline;
+	}
+
+	public void setOnline(boolean isOnline)
+	{
+		this.isOnline = isOnline;
+	}
+
 	public User()
 	{
 		
@@ -69,7 +89,15 @@ public class User
 	{
 		User u = new User();
 		u.setRealName("eli");
+		u.setPassword("password");
+		u.setUsername("jeli");
+		u.setID();
+		u.setOnline(false);
 		System.out.println((u.getRealName()));
+		System.out.println((u.getPassword()));
+		System.out.println((u.getUsername()));
+		System.out.println((u.getID()));
+		System.out.println((u.isOnline()));
 	}
 
 }
