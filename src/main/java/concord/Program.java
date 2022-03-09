@@ -12,10 +12,6 @@ public class Program
 	
 	
 	
-	
-	
-
-	
 	public P_Profile getProgramProfile()
 	{
 		return programProfile;
@@ -46,11 +42,44 @@ public class Program
 		//programProfile.members
 	}
 
-	public Channel createChannel(UUID user)
+	public Channel createChannel(String channelName, String channelDescription)
 	{
-		Channel channel = new Channel();
+		Channel channel = new Channel(channelName, channelDescription);
+		channels.add(channel);
 		return channel;
 	}
 	
+	public String toString()
+	{
+		String returnString = "";
+		int count = 0;
+		
+		while(count < channels.size())
+		{
+			returnString = returnString + channels.get(count).toString();
+			
+			
+			boolean isLastChannel = (count == (channels.size()-1));
+			
+			// adds a line space, unless its the last channel
+			if(!(isLastChannel))
+			{
+				returnString += "\n";
+			}
+			
+			count++;
+			
+		}
+		return returnString;
+	}
 	
+	public static void main(String[] args)
+	{
+		Program program = new Program();
+		program.createChannel("Lobby", "A place to chat");
+		program.createChannel("Exec", "For people in executive positions");
+		System.out.println(program.toString());
+		
+		System.out.println("works");
+	}
 }

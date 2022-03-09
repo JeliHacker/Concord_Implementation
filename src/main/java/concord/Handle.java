@@ -22,9 +22,23 @@ public class Handle
 		this.link = link;
 	}
 	
-	public Handle()
+	public Handle(String socialMedia, String link)
 	{
-		
+		this.socialMedia = socialMedia;
+		this.link = link;
+	}
+	
+	public String toString()
+	{
+		String returnString = "SM: " + this.getSocialMedia() + ", Link: " + this.getLink();
+		return returnString;
+	}
+	
+	
+	public static void main(String[] args)
+	{
+		Handle handle = new Handle("instagram", "www.instagram.com");
+		System.out.println(handle.toString());
 	}
 	
 }

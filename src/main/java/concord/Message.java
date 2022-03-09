@@ -5,7 +5,7 @@ import java.util.UUID;
 
 public class Message
 {
-	public int messageID;	
+	public UUID messageID;	
 	public UUID user_id;
 	public String message;
 	public Timestamp timestamp;
@@ -13,11 +13,11 @@ public class Message
 	
 	
 
-	public int getMessageID()
+	public UUID getMessageID()
 	{
 		return messageID;
 	}
-	public void setMessageID(int messageID)
+	public void setMessageID(UUID messageID)
 	{
 		this.messageID = messageID;
 	}
@@ -29,4 +29,17 @@ public class Message
 	{
 		this.user_id = user_id;
 	}
+	public boolean isPinned()
+	{
+		return isPinned;
+	}
+	
+	public void setPinned(boolean isPinned)
+	{
+		this.isPinned = isPinned;
+	}
+	
+	
+	
+	
 }
