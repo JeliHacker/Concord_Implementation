@@ -6,4 +6,5 @@ public class Permission
 {
 	public String roleType;
 	HashMap flags = new HashMap<>();
+	
 }

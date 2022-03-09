@@ -7,11 +7,13 @@ import java.util.UUID;
 
 public class User
 {
+
+	public UUID ID;
+	
 	public String username;
 	public String realName;
-
 	public String password;
-	public UUID ID;
+	
 	ArrayList<User> blocked_users = new ArrayList<User>(5);
 	//ArrayList<User> friends = new ArrayList<User>(5);
 	public Profile profile;
@@ -76,8 +78,13 @@ public class User
 		this.isOnline = isOnline;
 	}
 
-	public User()
+	public User(String username, String realname, String password)
 	{
+		setID();
+		setUsername(username);
+		setRealName(realname);
+		setPassword(password);
+		setOnline(true);
 		
 	}
 	
@@ -103,15 +110,11 @@ public class User
 		Image computer = file;
 		Image image = new Image();
 		*/
-		User u = new User();
-		u.setRealName("eli");
-		u.setPassword("password");
-		u.setUsername("jeli");
-		u.setID();
-		u.setOnline(false);
+		User u = new User("jeli", "eli", "password");
 		
-		User annoyingUser = new User();
-		annoyingUser.setRealName("aj");
+		
+		User annoyingUser = new User("ajtkh", "aj", "ajpass");
+		
 		u.blockUser(annoyingUser);
 		
 		System.out.println((u.getRealName()));

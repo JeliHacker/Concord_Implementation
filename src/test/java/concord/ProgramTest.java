@@ -28,7 +28,6 @@ class ProgramTest
 				+ "Name: Exec, Description: For people in executive positions";
 		
 		// A server can have multiple channels
-		
 		assertEquals(expectedProgramString, program.toString());
 	}
 

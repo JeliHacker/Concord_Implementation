@@ -8,13 +8,13 @@ import org.junit.jupiter.api.Test;
 
 class UserTest
 {
-	User u = new User();
-	User annoyingUser = new User();
-	User b = new User();
-	User c = new User();
-	User d = new User();
-	User e = new User();
-	User f = new User();
+	User u = new User("jeli", "eli", "password");
+	User annoyingUser = new User("aj1","aj", "password");
+	User b = new User("b", "eli", "password");
+	User c = new User("c", "eli", "password");
+	User d = new User("d", "eli", "password");
+	User e = new User("e", "eli", "password");
+	User f = new User("f", "eli", "password");
 	
 	@BeforeEach
 	void setUp() throws Exception

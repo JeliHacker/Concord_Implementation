@@ -31,7 +31,7 @@ public class P_Profile
 	
 	public static void main(String[] args)
 	{
-		User u = new User();
+		User u = new User("jeli", "eli", "password");
 		u.setRealName("eli");
 		u.setPassword("password");
 		u.setUsername("jeli");

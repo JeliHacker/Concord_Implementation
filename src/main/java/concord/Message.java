@@ -6,7 +6,7 @@ import java.util.UUID;
 public class Message
 {
 	public UUID messageID;	
-	public UUID user_id;
+	public UUID userID;
 	public String message;
 	public Timestamp timestamp;
 	public boolean isPinned;
@@ -23,11 +23,11 @@ public class Message
 	}
 	public UUID getUser_id()
 	{
-		return user_id;
+		return userID;
 	}
 	public void setUser_id(UUID user_id)
 	{
-		this.user_id = user_id;
+		this.userID = user_id;
 	}
 	public boolean isPinned()
 	{
@@ -39,7 +39,36 @@ public class Message
 		this.isPinned = isPinned;
 	}
 	
+	public String toString()
+	{
+		String returnString = "messageID: " + messageID.toString()
+			+ ", " + userID.toString()
+			+ ", " + message
+			+ ", " + timestamp.toString()
+			+ ", " + isPinned;
+		
+		return returnString;
+	}
 	
+	public Message(String messageText, UUID user_id)
+	{
+		this.messageID = UUID.randomUUID();
+		this.userID = user_id;
+		this.message = messageText;
+		
+		Long datetime = System.currentTimeMillis();
+		Timestamp currentTimestamp = new Timestamp(datetime);
+		this.timestamp = currentTimestamp;
+		this.isPinned = false;
+		
+		
+	}
 	
+	public static void main(String[] args)
+	{
+		User user = new User("username", "realname", "password");
+		Message exampleMessage = new Message("hey there", user.ID);
+		
+	}
 	
 }
