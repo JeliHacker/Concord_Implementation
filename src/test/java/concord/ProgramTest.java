@@ -24,9 +24,14 @@ class ProgramTest
 	@Test
 	void test()
 	{
-		String expectedProgramString = "Name: Lobby, Description: A place to chat\n"
-				+ "Name: Exec, Description: For people in executive positions";
-		
+		String expectedProgramString = 
+				"Name: Lobby\n"
+				+ "Description: A place to chat\n"
+				+ "Messages: []\n"
+				+ "Name: Exec\n"
+				+ "Description: For people in executive positions\n"
+				+ "Messages: []";
+	
 		// A server can have multiple channels
 		assertEquals(expectedProgramString, program.toString());
 	}

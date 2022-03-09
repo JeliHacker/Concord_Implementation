@@ -59,7 +59,71 @@ public class Profile
 		this.handles = handles;
 	}
 	
+	public void addHandle(Handle handle)
+	{
+		this.handles.add(handle);
+	}
 	
+	public void addHobby(Hobby hobby)
+	{
+		this.hobbies.add(hobby);
+	}
+	
+	public String handlesToString()
+	{
+		int count = 0;
+		String returnString = "";
+		while(count < handles.size())
+		{
+			returnString = returnString + handles.get(count).toString();
+			
+			
+			boolean isLastHandle = (count == (handles.size()-1));
+			
+			// adds a line space, unless its the last handle
+			if(!(isLastHandle))
+			{
+				returnString += "\n";
+			}
+			
+			count++;
+			
+		}
+		return returnString;
+	}
+	
+	public String hobbiesToString()
+	{
+		int count = 0;
+		String returnString = "";
+		while(count < hobbies.size())
+		{
+			returnString = returnString + hobbies.get(count).toString();
+			
+			
+			boolean isLastHobby = (count == (hobbies.size()-1));
+			
+			// adds a line space, unless its the last hobby
+			if(!(isLastHobby))
+			{
+				returnString += "\n";
+			}
+			
+			count++;
+			
+		}
+		return returnString;
+	}
+	
+	public String toString()
+	{
+		String returnString = "";
+		returnString = "Name: " + getReal_name() + "\n"
+			+ "Description: " + getDescription() + "\n"
+			+ "Handles: " + handles.toString() + "\n"
+			+ "Hobbies: " + hobbies.toString();
+		return returnString;
+	}
 	
 	
 	

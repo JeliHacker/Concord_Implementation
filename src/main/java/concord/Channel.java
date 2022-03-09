@@ -76,6 +76,9 @@ public class Channel
 		Message exMessage = new Message("hey there", user.ID);
 		exampleChannel.addMessage(exMessage);
 		System.out.println(exampleChannel.toString());
+		
+		exMessage.setPinned(true);
+		System.out.println(exMessage.isPinned);
 		System.out.println("works");
 	}
 }

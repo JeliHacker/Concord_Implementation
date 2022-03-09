@@ -39,6 +39,20 @@ public class Message
 		this.isPinned = isPinned;
 	}
 	
+	
+	
+	
+	public String getMessage()
+	{
+		return message;
+	}
+	
+	public void setMessage(String message)
+	{
+		this.message = message;
+	}
+	
+	
 	public String toString()
 	{
 		String returnString = "messageID: " + messageID.toString()
@@ -68,6 +82,10 @@ public class Message
 	{
 		User user = new User("username", "realname", "password");
 		Message exampleMessage = new Message("hey there", user.ID);
+		
+		System.out.println(exampleMessage.toString());
+		System.out.println(exampleMessage.getMessage());
+		
 		
 	}
 	

@@ -49,6 +49,14 @@ public class Program
 		return channel;
 	}
 	
+	public void leaveProgram(User admin, User userToRemove)
+	{
+		if(admin.getID() == userToRemove.getID()) // if the user is trying to leave on his own
+		{
+			
+		}
+	}
+	
 	public String toString()
 	{
 		String returnString = "";

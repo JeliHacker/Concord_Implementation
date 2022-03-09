@@ -12,4 +12,38 @@ public class Hobby
 	}
 	
 	
+	
+	public String getHobbyName()
+	{
+		return hobbyName;
+	}
+
+
+
+	public void setHobbyName(String hobbyName)
+	{
+		this.hobbyName = hobbyName;
+	}
+
+
+
+	public String getHobbyDescription()
+	{
+		return hobbyDescription;
+	}
+
+
+
+	public void setHobbyDescription(String hobbyDescription)
+	{
+		this.hobbyDescription = hobbyDescription;
+	}
+
+
+
+	public String toString()
+	{
+		String returnString = "Hobby: " + this.getHobbyName() + ", Description: " + this.getHobbyDescription();
+		return returnString;
+	}
 }
