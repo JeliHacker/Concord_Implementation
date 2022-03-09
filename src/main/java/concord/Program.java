@@ -7,7 +7,7 @@ public class Program
 {
 
 	public P_Profile programProfile;
-	public UUID program_ID;
+	public int program_ID;
 	public ArrayList<Channel> channels = new ArrayList<Channel>(1);
 	
 	
@@ -26,12 +26,12 @@ public class Program
 		this.programProfile = programProfile;
 	}
 
-	public UUID getProgram_ID()
+	public int getProgram_ID()
 	{
 		return program_ID;
 	}
 
-	public void setProgram_ID(UUID program_ID)
+	public void setProgram_ID(int program_ID)
 	{
 		this.program_ID = program_ID;
 	}

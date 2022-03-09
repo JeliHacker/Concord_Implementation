@@ -1,5 +1,7 @@
 package concord;
 
+import java.awt.Image;
+import java.io.File;
 import java.util.ArrayList;
 import java.util.UUID;
 
@@ -11,6 +13,7 @@ public class User
 	public String password;
 	public UUID ID;
 	ArrayList<User> blocked_users = new ArrayList<User>(5);
+	//ArrayList<User> friends = new ArrayList<User>(5);
 	public Profile profile;
 	ArrayList<Integer> programID = new ArrayList<Integer>(5);
 	public boolean isOnline;
@@ -78,6 +81,14 @@ public class User
 		
 	}
 	
+	
+	public void blockUser(User user)
+	{
+		this.blocked_users.add(user);
+	}
+	
+	
+	
 	public String toString()
 	{
 		
@@ -87,17 +98,29 @@ public class User
 	
 	public static void main(String[] args) 
 	{
+		/*
+		File file = new File("/Users/jeligooch/eclipse-workspace/Sprint1Implementation/computer.jpeg");
+		Image computer = file;
+		Image image = new Image();
+		*/
 		User u = new User();
 		u.setRealName("eli");
 		u.setPassword("password");
 		u.setUsername("jeli");
 		u.setID();
 		u.setOnline(false);
+		
+		User annoyingUser = new User();
+		annoyingUser.setRealName("aj");
+		u.blockUser(annoyingUser);
+		
 		System.out.println((u.getRealName()));
 		System.out.println((u.getPassword()));
 		System.out.println((u.getUsername()));
 		System.out.println((u.getID()));
 		System.out.println((u.isOnline()));
+		System.out.println((u.blocked_users.get(0).getRealName()));
+		
 	}
 
 }
