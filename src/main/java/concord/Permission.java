@@ -5,6 +5,8 @@ import java.util.HashMap;
 public class Permission
 {
 	public String roleType;
-	HashMap flags = new HashMap<>();
+	HashMap<Object, Object> flags = new HashMap<>();
+	
+	
 	
 }
