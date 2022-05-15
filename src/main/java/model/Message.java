@@ -52,36 +52,49 @@ public class Message
 		this.message = message;
 	}
 	
+	//in a perfect world...
+//	public String toString()
+//	{
+//		String returnString = "messageID: " + messageID.toString()
+//			+ ", " + userID.toString()
+//			+ ", " + message
+//			+ ", " + timestamp.toString()
+//			+ ", " + isPinned;
+//		
+//		return returnString;
+//	}
 	
 	public String toString()
 	{
-		String returnString = "messageID: " + messageID.toString()
-			+ ", " + userID.toString()
-			+ ", " + message
-			+ ", " + timestamp.toString()
-			+ ", " + isPinned;
-		
-		return returnString;
+		return this.message;
 	}
 	
-	public Message(String messageText, UUID user_id)
+	// in a perfect world, this is what the constructor would look like
+//	public Message(String messageText, UUID user_id)
+//	{
+//		this.messageID = UUID.randomUUID();
+//		this.userID = user_id;
+//		this.message = messageText;
+//		
+//		Long datetime = System.currentTimeMillis();
+//		Timestamp currentTimestamp = new Timestamp(datetime);
+//		this.timestamp = currentTimestamp;
+//		this.isPinned = false;
+//	}
+	
+	public Message(String messageText)
 	{
-		this.messageID = UUID.randomUUID();
-		this.userID = user_id;
 		this.message = messageText;
-		
-		Long datetime = System.currentTimeMillis();
-		Timestamp currentTimestamp = new Timestamp(datetime);
-		this.timestamp = currentTimestamp;
 		this.isPinned = false;
-		
-		
 	}
 	
 	public static void main(String[] args)
 	{
-		User user = new User("username", "realname", "password");
-		Message exampleMessage = new Message("hey there", user.ID);
+		//User user = new User("username", "realname", "password");
+		User user = new User("jeli");
+		
+		//Message exampleMessage = new Message("hey there", user.ID);
+		Message exampleMessage = new Message("hey there");
 		
 		System.out.println(exampleMessage.toString());
 		System.out.println(exampleMessage.getMessage());

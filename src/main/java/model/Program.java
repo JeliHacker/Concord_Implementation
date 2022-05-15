@@ -10,6 +10,12 @@ public class Program
 	public int program_ID;
 	public ArrayList<Channel> channels = new ArrayList<Channel>(1);
 	
+	public String programName;
+	
+	public Program(String programName)
+	{
+		this.programName = programName;
+	}
 	
 	
 	public P_Profile getProgramProfile()
@@ -44,7 +50,7 @@ public class Program
 
 	public Channel createChannel(String channelName, String channelDescription)
 	{
-		Channel channel = new Channel(channelName, channelDescription);
+		Channel channel = new Channel(channelName);
 		channels.add(channel);
 		return channel;
 	}
@@ -83,7 +89,7 @@ public class Program
 	
 	public static void main(String[] args)
 	{
-		Program program = new Program();
+		Program program = new Program("ExampleProgram");
 		program.createChannel("Lobby", "A place to chat");
 		program.createChannel("Exec", "For people in executive positions");
 		System.out.println(program.toString());

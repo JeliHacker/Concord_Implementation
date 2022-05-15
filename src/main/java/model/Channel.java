@@ -30,10 +30,15 @@ public class Channel
 		messages.add(message);
 	}
 	
-	public Channel(String channelName, String channelDescription)
+//	public Channel(String channelName, String channelDescription)
+//	{
+//		this.channelName = channelName;
+//		this.channelDescription = channelDescription;
+//	}
+	
+	public Channel(String channelName)
 	{
 		this.channelName = channelName;
-		this.channelDescription = channelDescription;
 	}
 	
 	public String messagesToString()
@@ -70,10 +75,14 @@ public class Channel
 	
 	public static void main(String[] args)
 	{
-		Channel exampleChannel = new Channel("Lobby", "A place to chat");
-		User user = new User("username", "realname", "password");
+		//Channel exampleChannel = new Channel("Lobby", "A place to chat");
+		Channel exampleChannel = new Channel("Lobby");
+		//User user = new User("username", "realname", "password");
+		User user = new User("jeli");
 		
-		Message exMessage = new Message("hey there", user.ID);
+//		Message exMessage = new Message("hey there", user.ID);
+		Message exMessage = new Message("hey there");
+		
 		exampleChannel.addMessage(exMessage);
 		System.out.println(exampleChannel.toString());
 		

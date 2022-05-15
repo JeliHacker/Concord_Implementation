@@ -4,16 +4,16 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import model.data_model;
-import model.navigation_model;
+import model.DataModel;
+import model.NavigationModel;
 
 public class UserController
 {
 
-	navigation_model model;
-	data_model dm;
+	NavigationModel model;
+	DataModel dm;
 	
-	public void setModel(navigation_model new_model, data_model dm)
+	public void setModel(NavigationModel new_model, DataModel dm)
 	{
 		model = new_model;
 		this.dm = dm;

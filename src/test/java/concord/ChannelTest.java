@@ -12,33 +12,33 @@ import model.User;
 
 class ChannelTest
 {
-	Channel exampleChannel = new Channel("Lobby", "A place to chat");
-	User user = new User("username", "realname", "password");
-	Message exMessage = new Message("hey there", user.ID);
-	
-	@BeforeEach
-	void setUp() throws Exception
-	{
-		exampleChannel.addMessage(exMessage);
-		exMessage.setPinned(true);
-	}
-
-	@AfterEach
-	void tearDown() throws Exception
-	{
-		
-	}
-
-	@Test
-	void test()
-	{
-		// Pin messages
-		assertEquals(true, exMessage.isPinned);
-		exMessage.setPinned(false);
-		assertEquals(false, exMessage.isPinned);
-		
-		
-		System.out.println("Passes all tests!");
-	}
+//	Channel exampleChannel = new Channel("Lobby", "A place to chat");
+//	User user = new User("username", "realname", "password");
+//	Message exMessage = new Message("hey there", user.ID);
+//	
+//	@BeforeEach
+//	void setUp() throws Exception
+//	{
+//		exampleChannel.addMessage(exMessage);
+//		exMessage.setPinned(true);
+//	}
+//
+//	@AfterEach
+//	void tearDown() throws Exception
+//	{
+//		
+//	}
+//
+//	@Test
+//	void test()
+//	{
+//		// Pin messages
+//		assertEquals(true, exMessage.isPinned);
+//		exMessage.setPinned(false);
+//		assertEquals(false, exMessage.isPinned);
+//		
+//		
+//		System.out.println("Passes all tests!");
+//	}
 
 }

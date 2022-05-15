@@ -3,15 +3,15 @@ package views;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
-import model.data_model;
-import model.navigation_model;
+import model.DataModel;
+import model.NavigationModel;
 
 public class AddUserController
 {
-	navigation_model nav_model;
-	data_model dm;
+	NavigationModel nav_model;
+	DataModel dm;
 	
-	public void setModel(navigation_model model, data_model d_m)
+	public void setModel(NavigationModel model, DataModel d_m)
 	{
 		nav_model = model;
 		dm = d_m;

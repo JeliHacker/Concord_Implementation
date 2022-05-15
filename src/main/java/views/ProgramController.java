@@ -6,16 +6,16 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
 import model.Channel;
-import model.Messages;
+import model.Message;
 import model.Program;
-import model.data_model;
-import model.navigation_model;
-import model.user;
+import model.DataModel;
+import model.NavigationModel;
+import model.User;
 
 public class ProgramController
 {
-	navigation_model model;
-	data_model d_m;
+	NavigationModel model;
+	DataModel d_m;
 	
 	@FXML
     private Button AddUsers_B;
@@ -50,7 +50,7 @@ public class ProgramController
 
 
 	
-	public void setModel(navigation_model new_model, data_model new_dm)
+	public void setModel(NavigationModel new_model, DataModel new_dm)
 	{
 		model = new_model;
 		d_m = new_dm;
@@ -63,12 +63,12 @@ public class ProgramController
 		c.setItems(d_m.channel_list);
 		
 		@SuppressWarnings("unchecked")
-		ListView<Messages> m = (ListView<Messages>) Message_LV;
+		ListView<Message> m = (ListView<Message>) Message_LV;
 		m.setItems(d_m.message_list);
 		
 		
 		@SuppressWarnings("unchecked")
-		ListView<user> u = (ListView<user>) User_LV;
+		ListView<User> u = (ListView<User>) User_LV;
 		u.setItems(d_m.user_list);
 		
 	}

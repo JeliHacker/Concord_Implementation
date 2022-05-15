@@ -5,14 +5,14 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
-import model.navigation_model;
+import model.NavigationModel;
 
 public class LoginController
 {
-	navigation_model model;
+	NavigationModel model;
 	
 	
-	public void setModel(navigation_model newModel)
+	public void setModel(NavigationModel newModel)
 	{
 		model = newModel;
 	}

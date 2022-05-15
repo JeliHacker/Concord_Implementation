@@ -20,7 +20,9 @@ public class User
 	public ArrayList<Integer> programID = new ArrayList<Integer>(5);
 	public boolean isOnline;
 	
-
+	
+	
+	
 	public String getUsername()
 	{
 		return username;
@@ -78,14 +80,19 @@ public class User
 		this.isOnline = isOnline;
 	}
 
-	public User(String username, String realname, String password)
+	// in a perfect world, this would be our constructor
+//	public User(String username, String realname, String password)
+//	{
+//		setID();
+//		setUsername(username);
+//		setRealName(realname);
+//		setPassword(password);
+//		setOnline(true);
+//	}
+	
+	public User(String username)
 	{
-		setID();
 		setUsername(username);
-		setRealName(realname);
-		setPassword(password);
-		setOnline(true);
-		
 	}
 	
 	
@@ -110,10 +117,12 @@ public class User
 		Image computer = file;
 		Image image = new Image();
 		*/
-		User u = new User("jeli", "eli", "password");
 		
+		//User u = new User("jeli", "eli", "password");
+		User u = new User("jeli");
 		
-		User annoyingUser = new User("ajtkh", "aj", "ajpass");
+		//User annoyingUser = new User("ajtkh", "aj", "ajpass");
+		User annoyingUser = new User("ajtkh");
 		
 		u.blockUser(annoyingUser);
 		
@@ -122,7 +131,7 @@ public class User
 		System.out.println((u.getUsername()));
 		System.out.println((u.getID()));
 		System.out.println((u.isOnline()));
-		System.out.println((u.blocked_users.get(0).getRealName()));
+		System.out.println((u.blocked_users.get(0).getUsername()));
 		
 	}
 

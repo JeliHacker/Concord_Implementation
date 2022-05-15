@@ -3,13 +3,13 @@ package views;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
-import model.navigation_model;
+import model.NavigationModel;
 
 public class RegisterController
 {
-	navigation_model nav_model;
+	NavigationModel nav_model;
 	
-	public void setModel(navigation_model model)
+	public void setModel(NavigationModel model)
 	{
 		nav_model = model;
 	}
