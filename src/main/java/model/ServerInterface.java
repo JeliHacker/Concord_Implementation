@@ -1,4 +1,4 @@
-package concord;
+package model;
 
 public interface ServerInterface
 {

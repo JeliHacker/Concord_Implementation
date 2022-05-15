@@ -1,4 +1,4 @@
-package concord;
+package model;
 
 //import java.awt.Image;
 //import java.io.File;
@@ -14,10 +14,10 @@ public class User
 	public String realName;
 	public String password;
 	
-	ArrayList<User> blocked_users = new ArrayList<User>(5);
+	public ArrayList<User> blocked_users = new ArrayList<User>(5);
 	//ArrayList<User> friends = new ArrayList<User>(5);
 	public Profile profile;
-	ArrayList<Integer> programID = new ArrayList<Integer>(5);
+	public ArrayList<Integer> programID = new ArrayList<Integer>(5);
 	public boolean isOnline;
 	
 

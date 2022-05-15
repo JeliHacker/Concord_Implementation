@@ -6,6 +6,10 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import model.Channel;
+import model.Message;
+import model.User;
+
 class ChannelTest
 {
 	Channel exampleChannel = new Channel("Lobby", "A place to chat");

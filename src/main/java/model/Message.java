@@ -1,4 +1,4 @@
-package concord;
+package model;
 
 import java.sql.Timestamp;
 import java.util.UUID;

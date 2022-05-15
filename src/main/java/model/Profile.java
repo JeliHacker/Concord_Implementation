@@ -1,4 +1,4 @@
-package concord;
+package model;
 
 import java.awt.Image;
 import java.util.ArrayList;
@@ -12,9 +12,9 @@ public class Profile
 	
 	public String description;
 	
-	ArrayList<Handle> handles = new ArrayList<Handle>(1);
+	public ArrayList<Handle> handles = new ArrayList<Handle>(1);
 	
-	ArrayList<Hobby> hobbies = new ArrayList<Hobby>(1);
+	public ArrayList<Hobby> hobbies = new ArrayList<Hobby>(1);
 	
 	
 	//Getters and Setters

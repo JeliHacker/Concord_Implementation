@@ -1,33 +1,41 @@
-package concord;
+package model;
 
 import java.util.HashMap;
 
 public class Permission
 {
 	public String roleType;
-	HashMap<Object, Object> flags = new HashMap<>();
+	
+	public HashMap<String, Boolean> flags = new HashMap<String, Boolean>();
 	
 	public Permission()
 	{
 		
 	}
-
-	public String getRoleType()
+	
+	
+	public String getRole_type()
 	{
 		return roleType;
 	}
-
-	public void setRoleType(String roleType)
+	/**
+	 * @param role_type the role_type to set
+	 */
+	public void setRole_type(String roleType)
 	{
 		this.roleType = roleType;
 	}
-
-	public HashMap<Object, Object> getFlags()
+	/**
+	 * @return the flags
+	 */
+	public HashMap<String, Boolean> getFlags()
 	{
 		return flags;
 	}
-
-	public void setFlags(HashMap<Object, Object> flags)
+	/**
+	 * @param flags the flags to set
+	 */
+	public void setFlags(HashMap<String, Boolean> flags)
 	{
 		this.flags = flags;
 	}

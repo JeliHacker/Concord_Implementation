@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="684.0" prefWidth="1216.0" style="-fx-pref-width: 1216; -fx-pref-height: 684;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.ProgramController">
+   <left>
+      <SplitPane dividerPositions="0.4" prefHeight="684.0" prefWidth="472.0" style="-fx-background-color: #40739e#40739e;" BorderPane.alignment="CENTER">
+         <items>
+            <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" style="-fx-spacing: 15;">
+               <children>
+                  <Button id="user_B" fx:id="userButton" alignment="CENTER" mnemonicParsing="false" onAction="#OnClickUser" text="User">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="26.0" />
+                     </font>
+                  </Button>
+                  <Line endX="100.0" startX="-100.0" />
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" style="-fx-spacing: 5;">
+                     <children>
+                        <Button fx:id="addProgram_B" mnemonicParsing="false" onAction="#OnClickAddProgram" text="Add Programs" />
+                        <Button mnemonicParsing="false" text="Add Friends" />
+                     </children>
+                  </HBox>
+                  <ListView fx:id="Program_LV" prefHeight="613.0" prefWidth="201.0" />
+               </children>
+            </VBox>
+            <VBox prefHeight="682.0" prefWidth="460.0" style="-fx-spacing: 10; -fx-pref-width: 500;">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="addChannel_B" mnemonicParsing="false" onAction="#OnClickAddChannel" text="Add Channels" />
+                     </children>
+                  </HBox>
+                  <ListView id="channels_LV" fx:id="channel_LV" prefHeight="700.0" prefWidth="263.0" />
+               </children>
+            </VBox>
+         </items>
+      </SplitPane>
+   </left>
+   <right>
+      <VBox alignment="TOP_CENTER" prefHeight="684.0" prefWidth="188.0" style="-fx-spacing: 10; -fx-background-color: #40739e#40739e #40739e#40739e;" BorderPane.alignment="CENTER">
+         <children>
+            <Label text="Users">
+               <font>
+                  <Font size="34.0" />
+               </font>
+            </Label>
+            <Line endX="100.0" startX="-100.0" />
+            <Button fx:id="AddUsers_B" mnemonicParsing="false" onAction="#OnClickAddUser" text="Add Users" />
+            <ListView id="users_LV" fx:id="User_LV" prefHeight="635.0" prefWidth="201.0" />
+         </children>
+      </VBox>
+   </right>
+   <center>
+      <VBox alignment="TOP_CENTER" prefHeight="668.0" prefWidth="543.0" style="-fx-spacing: 8;" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="TOP_CENTER" prefHeight="35.0" prefWidth="543.0">
+               <children>
+                  <Label text="Channel Name">
+                     <font>
+                        <Font size="28.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <ListView id="Messages_LV" fx:id="Message_LV" prefHeight="577.0" prefWidth="543.0" />
+            <HBox alignment="BASELINE_CENTER" prefHeight="66.0" prefWidth="543.0" style="-fx-alignment: bottom-center;">
+               <children>
+                  <TextField fx:id="Msg_TB" prefHeight="113.0" prefWidth="543.0" promptText="The pen is mightier than the sword!">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </TextField>
+                  <Button fx:id="Send_B" mnemonicParsing="false" onAction="#OnClickSend" prefHeight="70.0" prefWidth="140.0" text="Send" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>
