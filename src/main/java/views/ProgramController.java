@@ -1,10 +1,14 @@
 package views;
 
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
+import javafx.geometry.Insets;
 import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
 import model.Channel;
 import model.Message;
 import model.Program;
@@ -22,6 +26,8 @@ public class ProgramController
 
     @FXML
     private ListView<?> Message_LV;
+    
+    
 
     @FXML
     private TextField Msg_TB;
@@ -32,6 +38,8 @@ public class ProgramController
     @FXML
     private Button Send_B;
 
+    
+    
     @FXML
     private ListView<?> User_LV;
 
@@ -71,6 +79,8 @@ public class ProgramController
 		ListView<User> u = (ListView<User>) User_LV;
 		u.setItems(d_m.user_list);
 		
+		Send_B.setPadding(Insets.EMPTY);
+		
 	}
 
 	
@@ -99,9 +109,37 @@ public class ProgramController
     	model.open_AddUser();
     }
 
+    
     @FXML
     void OnClickSend(ActionEvent event) 
     {
+    	String msg = Msg_TB.textProperty().get();
+    	if(msg != "")
+    	{
+    		d_m.add_message(msg);
+        	Msg_TB.setText("");
+    	}
+    	
+    	Msg_TB.setOnKeyPressed(new EventHandler<KeyEvent>() 
+    	{
+    	    @Override
+    	    public void handle(KeyEvent ke) {
+    	        if (ke.getCode().equals(KeyCode.ENTER)) {
+    	        	System.out.println("121");
+    	        	if(msg != "")
+    	        	{
+    	        		d_m.add_message(msg);
+    	            	Msg_TB.setText("");
+    	        	}
+    	        }
+    	    }
+    	});
+    }
+    
+    @FXML
+    public void onEnter(ActionEvent ae)
+    {
+    	System.out.println("test");
     	String msg = Msg_TB.textProperty().get();
     	if(msg != "")
     	{

@@ -11,9 +11,9 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane prefHeight="684.0" prefWidth="1216.0" style="-fx-pref-width: 1216; -fx-pref-height: 684;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.ProgramController">
+<BorderPane prefHeight="684.0" prefWidth="1216.0" style="-fx-pref-width: 1216; -fx-pref-height: 684;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.ProgramController">
    <left>
-      <SplitPane dividerPositions="0.4" prefHeight="684.0" prefWidth="472.0" style="-fx-background-color: #40739e#40739e;" BorderPane.alignment="CENTER">
+      <SplitPane dividerPositions="0.4" prefHeight="684.0" prefWidth="472.0" BorderPane.alignment="CENTER">
          <items>
             <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" style="-fx-spacing: 15;">
                <children>
@@ -46,7 +46,7 @@
       </SplitPane>
    </left>
    <right>
-      <VBox alignment="TOP_CENTER" prefHeight="684.0" prefWidth="188.0" style="-fx-spacing: 10; -fx-background-color: #40739e#40739e #40739e#40739e;" BorderPane.alignment="CENTER">
+      <VBox alignment="TOP_CENTER" prefHeight="684.0" prefWidth="188.0" style="-fx-spacing: 10;" BorderPane.alignment="CENTER">
          <children>
             <Label text="Users">
                <font>
@@ -71,15 +71,20 @@
                   </Label>
                </children>
             </HBox>
-            <ListView id="Messages_LV" fx:id="Message_LV" prefHeight="577.0" prefWidth="543.0" />
+            <ListView id="Messages_LV" fx:id="Message_LV" maxWidth="543.0" prefHeight="577.0" prefWidth="543.0" />
             <HBox alignment="BASELINE_CENTER" prefHeight="66.0" prefWidth="543.0" style="-fx-alignment: bottom-center;">
                <children>
-                  <TextField fx:id="Msg_TB" prefHeight="113.0" prefWidth="543.0" promptText="The pen is mightier than the sword!">
+                  <TextField fx:id="Msg_TB" onAction="#onEnter" prefHeight="62.0" prefWidth="430.0" promptText="The pen is mightier than the sword!">
                      <font>
                         <Font size="25.0" />
                      </font>
                   </TextField>
-                  <Button fx:id="Send_B" mnemonicParsing="false" onAction="#OnClickSend" prefHeight="70.0" prefWidth="140.0" text="Send" />
+                  <Button id="emoteButton" alignment="CENTER" mnemonicParsing="false" prefHeight="70.0" prefWidth="60.0" text="Emote">
+                     <font>
+                        <Font name="Helvetica Neue" size="13.0" />
+                     </font>
+                  </Button>
+                  <Button id="sendMessageButton" fx:id="Send_B" alignment="CENTER" mnemonicParsing="false" onAction="#OnClickSend" prefHeight="70.0" prefWidth="60.0" text="Send" />
                </children>
             </HBox>
          </children>

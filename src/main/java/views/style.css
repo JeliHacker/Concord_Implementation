@@ -1,7 +1,56 @@
-#pane {
-	-fx-background-color: linear-gradient(to right,#1CA7EC, #1F2F98);
+* {
+  /* -fruit: #9292ff;
+  -blurple: #7259f4;  */
+  -fruit: #badc58;
+  -blurple: #6ab04c;
+  -black: #000000;
 }
 
-#chatbox {
+#pane 
+{
+	/* -fx-background-color: linear-gradient(to right,#1CA7EC, #1F2F98); */
+	-fx-background-color: linear-gradient(to right,#dff9fb, #c7ecee);
+	background-color: linear-gradient(to right,#dff9fb, #c7ecee);
+}
+
+#chatbox 
+{
 	-fx-wrap-text: true;
+}
+
+#Messages_LV
+{
+	-fx-wrap-text: true;
+}
+.list-cell
+{
+	-fx-word-wrap: break-word;
+	word-wrap: break-word;
+	-fx-wrap-text: true;
+	-fx-pref-width: 430;
+}
+
+.button
+{
+	-fx-background-color: -fruit;
+	background-color: -fruit;
+	-fx-text-fill: black;
+}
+
+.button:hover
+{
+	-fx-background-color: -blurple;
+	background-color: -blurple;
+}
+
+#emoteButton
+{
+	-fx-background-color: #dddddd;
+	background-color: #dddddd;
+}
+
+#emoteButton:hover
+{
+	-fx-background-color: #bbbbbb;
+	background-color: #bbbbbb;
 }

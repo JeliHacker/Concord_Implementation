@@ -40,5 +40,36 @@ class ChannelTest
 //		
 //		System.out.println("Passes all tests!");
 //	}
+	
+	
+	Channel exampleChannel = new Channel("lobby");
+	User user = new User("username");
+	Message exMessage = new Message("hey there");
+	
+	@BeforeEach
+	void setUp() throws Exception
+	{
+		exampleChannel.addMessage(exMessage);
+		exMessage.setPinned(true);
+	}
+	
+	@AfterEach
+	void tearDown() throws Exception
+	{
+		
+	}
+
+	@Test
+	void test()
+	{
+		// Pin messages
+		assertEquals(true, exMessage.isPinned);
+		exMessage.setPinned(false);
+		assertEquals(false, exMessage.isPinned);
+		
+		System.out.println(exampleChannel.toString());
+		
+		System.out.println("Passes all tests!");
+	}
 
 }
