@@ -4,17 +4,44 @@ import java.io.Serializable;
 import java.net.MalformedURLException;
 import java.rmi.Naming;
 import java.rmi.RemoteException;
+import java.rmi.server.UnicastRemoteObject;
 
-public class MathServer implements MathServerInterface, Serializable
+public class MathServer 
+	extends UnicastRemoteObject
+	implements MathServerInterface, Serializable
 {
 
 	private static final long serialVersionUID = 1L;
 
+	private int visits=0;
+	
+	public int getVisits()
+	{
+		return visits;
+	}
+
+
+
+	public void setVisits(int visits)
+	{
+		this.visits = visits;
+	}
+
+
+
+	protected MathServer() throws RemoteException
+	{
+		super();
+	}
+	
+	
+	
 	@Override
 	public int addNumbers(int a, int b) throws RemoteException
 	{
+		visits++;
 		System.out.println("Answering question");
-		return a - b;
+		return a + b;
 	}
 
 	public static void main(String[] args)
