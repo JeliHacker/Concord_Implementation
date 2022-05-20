@@ -25,8 +25,9 @@ class MathServerTest
 	{
 		ms = new MathServer();
 		
-		registry = LocateRegistry.createRegistry(2099);
+		registry = LocateRegistry.createRegistry(3099);
 		registry.rebind("MATHS", ms);
+		System.setProperty("java.rmi.server.hostname","192.168.1.2");
 		String[] names = registry.list();
 		for(String name:names)
 		{

@@ -79,7 +79,7 @@
                         <Font size="25.0" />
                      </font>
                   </TextField>
-                  <Button id="emoteButton" alignment="CENTER" mnemonicParsing="false" prefHeight="70.0" prefWidth="60.0" text="Emote">
+                  <Button id="emoteButton" fx:id="emoteButton" alignment="CENTER" mnemonicParsing="false" onAction="#OnClickEmoteButton" prefHeight="70.0" prefWidth="60.0" text="Emote">
                      <font>
                         <Font name="Helvetica Neue" size="13.0" />
                      </font>

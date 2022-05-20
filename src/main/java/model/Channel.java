@@ -8,7 +8,7 @@ public class Channel
 	public int channelID;
 	public String channelName;
 	ArrayList<Message> messages = new ArrayList<Message>(1);
-	public String channelDescription;
+	
 	public Message pinnedMessage;
 	
 	
@@ -20,6 +20,10 @@ public class Channel
 			if(messages.get(count).getMessageID() == messageID)
 			{
 				messages.get(count).setPinned(true);
+			}
+			else
+			{
+				messages.get(count).setPinned(false);
 			}
 			count++;
 		}
@@ -67,9 +71,7 @@ public class Channel
 	
 	public String toString()
 	{
-		String returnString = "Name: " + this.channelName + "\n"
-				+ "Description: " + this.channelDescription + "\n"
-				+ "Messages: " + this.messages.toString();
+		String returnString = this.channelName;
 		return returnString;
 	}
 	

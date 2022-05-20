@@ -109,6 +109,10 @@ public class ProgramController
     	model.open_AddUser();
     }
 
+    @FXML
+    void OnClickEmoteButton(ActionEvent event) {
+    	model.openEmotePage();
+    }
     
     @FXML
     void OnClickSend(ActionEvent event) 

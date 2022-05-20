@@ -8,6 +8,7 @@ import javafx.scene.layout.Pane;
 import javafx.stage.Screen;
 import javafx.stage.Stage;
 import views.AddChannelController;
+import views.AddEmoteController;
 import views.AddProgramController;
 import views.AddUserController;
 import views.LoginController;
@@ -184,6 +185,22 @@ public class NavigationModel
 			e.printStackTrace();
 		}
 		
+	}
+	
+	public void openEmotePage()
+	{
+		FXMLLoader loader = new FXMLLoader();
+		loader.setLocation(NavigationModel.class.getResource("../views/emotePage.fxml"));
+		try
+		{
+			Pane view = loader.load();
+			loginview.setCenter(view);
+			AddEmoteController cont = loader.getController();
+			cont.setModel(this, d_m);
+		} catch (IOException e)
+		{
+			e.printStackTrace();
+		}
 	}
 	
 }
