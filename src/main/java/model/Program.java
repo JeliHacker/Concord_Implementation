@@ -11,10 +11,12 @@ public class Program
 	public ArrayList<Channel> channels = new ArrayList<Channel>(1);
 	
 	public String programName;
+	public static ArrayList<EmoteEmoji> emojis = new ArrayList<EmoteEmoji>(0);
 	
 	public Program(String programName)
 	{
 		this.programName = programName;
+
 	}
 	
 	
@@ -23,6 +25,11 @@ public class Program
 		return programProfile;
 	}
 
+	public static ArrayList<EmoteEmoji> getEmoteArray()
+	{
+		return emojis;
+	}
+	
 	public void setProgramProfile(P_Profile programProfile)
 	{
 		this.programProfile = programProfile;
